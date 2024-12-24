@@ -7,19 +7,45 @@
     <title>Mentorship Matching Platform</title>
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
+
 <body>
     <div id="app">
         <header>
-            <nav id="header"></nav>
+            <div>Mentorship Platform</div>
+            <nav>
+                <a href="src/frontend/pages/login.html">Login</a>
+                <a href="src/frontend/pages/register.html">Register</a>
+            </nav>
         </header>
-        <main id="main-content">
-            <h1>Welcome to the Mentorship Matching Platform</h1>
-            <p>Please login or register to continue.</p>
+
+        <main>
+            <div class="content">
+                <h1>Welcome to the Mentorship Platform!</h1>
+                <p>Our platform connects individuals looking for guidance with experienced mentors. Whether you're seeking career advice, industry insights, or personal growth, our mentors are here to support you every step of the way.</p>
+                
+                <div class="features">
+                    <h2>Key Features:</h2>
+                    <ul>
+                        <li>Find and connect with experienced mentors in your field.</li>
+                        <li>Gain valuable insights into your career growth and development.</li>
+                        <li>Personalized mentorship programs tailored to your needs.</li>
+                        <li>Easy-to-use platform to schedule sessions and track progress.</li>
+                    </ul>
+                </div>
+
+                <button onclick="window.location.href='src/frontend/pages/login.html'">Get Started</button>
+            </div>
         </main>
-        <footer id="footer"></footer>
+
+        <footer>
+            &copy; 2024 Mentorship Platform. All Rights Reserved. <br>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </footer>
     </div>
-    <script src="../src/frontend/js/auth.js"></script>
-    <script src="../src/frontend/js/profile.js"></script>
-    <script src="../src/frontend/js/discovery.js"></script>
+
+    <script src="src/frontend/js/auth.js"></script>
+    <script src="src/frontend/js/profile.js"></script>
+    <script src="src/frontend/js/discovery.js"></script>
 </body>
+
 </html>

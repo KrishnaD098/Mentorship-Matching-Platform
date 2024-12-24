@@ -1,15 +1,20 @@
-function loadProfile() {
-    const mainContent = document.getElementById("main-content");
-  
-    mainContent.innerHTML = `
-      <h2>Your Profile</h2>
-      <p>Welcome, [User Name]!</p>
-      <p>Email: user@example.com</p>
-      <button onclick="editProfile()">Edit Profile</button>
-    `;
+// profile.js
+document.addEventListener('DOMContentLoaded', function() {
+  const profileForm = document.getElementById('profileForm');
+
+  if (profileForm) {
+      profileForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const name = profileForm.querySelector('input[name="name"]').value;
+          const bio = profileForm.querySelector('textarea[name="bio"]').value;
+
+          // Save profile updates
+          updateProfile(name, bio);
+      });
   }
-  
-  function editProfile() {
-    alert("Profile editing functionality coming soon!");
-  }
-  
+});
+
+function updateProfile(name, bio) {
+  console.log('Updating profile with:', name, bio);
+  // Add logic to send profile data to the server and update UI
+}

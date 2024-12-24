@@ -1,13 +1,49 @@
-.fade-in {
-    animation: fadeIn 1.5s ease-in-out;
-  }
-  
-  @keyframes fadeIn {
-    from {
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
       opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+      transform: translateY(10px);
   }
-  
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Button Hover Bounce */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-10px);
+  }
+  60% {
+      transform: translateY(-5px);
+  }
+}
+
+button:hover {
+  animation: bounce 0.6s;
+}
+
+/* Smooth Appear for Header and Footer */
+@keyframes slideIn {
+  0% {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+header {
+  animation: slideIn 1s ease-out;
+}
+
+footer {
+  animation: slideIn 1s ease-out;
+  animation-delay: 0.5s;
+}
